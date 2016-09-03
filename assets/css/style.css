@@ -1,5 +1,12 @@
+
 #container {
-	background-color: gray;
+	/*background-color: gray;*/
+	border: 2px solid grey;
 	width: 360px;
 	margin: 0 auto;
+}
+
+.tachado{
+	text-decoration: line-through;
+	color: gray;
 }
