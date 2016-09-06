@@ -1,5 +1,10 @@
 body{
 	font-family: 'Roboto', sans-serif;
+	background: #4ECDC4; /* fallback for old browsers */
+	background: -webkit-linear-gradient(to left, #4ECDC4 , #556270); /* Chrome 10-25, Safari 5.1-6 */
+	background: linear-gradient(to left, #4ECDC4 , #556270); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+
 }
 
 h1{
@@ -17,15 +22,6 @@ ul{
 	padding: 0;
 	list-style: none;
 }
-#container {
-	/*background-color: gray;*/
-	/*border: 2px solid grey;*/
-	width: 360px;
-	margin: 100px auto;
-	background-color: #f7f7f7;
-	/*investigar sobre sobras, esta se coloco como prueba*/
-	box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
-}
 
 li{
 	background-color: #fff;
@@ -38,13 +34,43 @@ li:nth-child(2n){
 	background: #f7f7f7;
 }
 
+li:hover span{
+	width: 40px;
+	opacity: 1.0;
+
+}
+
+span{
+	background-color: #e74c3c;
+	height: 40px;
+	margin-right: 20px;
+	text-align: center;
+	color: white;
+	width: 0px;
+	display: inline-block;
+	transition: 0.2s linear;
+	opacity: 0;
+}
+
 
 .tachado{
 	text-decoration: line-through;
 	color: gray;
 }
 
+.fa-plus-circle{
+	float: right;
+}
 
+#container {
+	/*background-color: gray;*/
+	/*border: 2px solid grey;*/
+	width: 360px;
+	margin: 100px auto;
+	background-color: #f7f7f7;
+	/*investigar sobre sobras, esta se coloco como prueba*/
+	box-shadow: 0 0 3px rgba(0, 0, 0, 0.1);
+}
 
 #textbox{
 	padding: 13px 13px 13px 20px;
@@ -54,10 +80,12 @@ li:nth-child(2n){
 	/*box sizing las propiedades incluyen el padding y el border pero no el margen*/
 	box-sizing: border-box;
 	color: #2980d9;
+	border: 3px solid rgba(0, 0, 0, 0);
 }
 
 #textbox:focus {
 	background-color: #fff;
 	border: 3px solid;
 	outline: none;
+
 }

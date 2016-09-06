@@ -21,8 +21,15 @@ $("#textbox").on("keypress", function (e) {
 	if (e.which === 13) {
 		var texto = $(this).val()
 		$(this).val("");
-		$("ul").append("<li><span>X</span> " + texto + "</li>")
+		$("ul").append("<li><span><i class='fa fa-trash'></i> </span> " + texto + "</li>")
 		// console.log($(this).val());
 	}
+
+})
+
+
+$(".fa-plus-circle").on("click", function () {
+
+	$("#textbox").fadeToggle();
 
 })
